@@ -34,6 +34,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65189721033:android:352d21caeb80a8dda0ee18",
+        "android_client_info": {
+          "package_name": "com.example.deliverydeliverycustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65189721033-e2r6jhb4o2e9jtne7uq7ti3ph6fdno2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrsgwEzJaAqeyDW3OzKXLU9lwJ3RgXlhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65189721033-e2r6jhb4o2e9jtne7uq7ti3ph6fdno2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
