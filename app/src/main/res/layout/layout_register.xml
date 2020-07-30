@@ -19,8 +19,60 @@
     android:inputType="textEmailAddress"
     android:text=""
     android:textColor="@color/colorPrimary"
+    android:textColorHint="@color/colorPrimary"
+    android:textSize="20sp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    app:met_singleLineEllipsis="true"
+    app:met_baseColor="@color/colorPrimary"
+    app:met_floatingLabel="highlight"
+    app:met_primaryColor="@color/colorPrimary"
+    />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edtPassword"
+        android:hint="Password "
+        android:inputType="textPassword"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_singleLineEllipsis="true"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edtName"
+        android:hint="Name "
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_singleLineEllipsis="true"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edtPhone"
+        android:hint="Phone Number "
+        android:inputType="phone"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_singleLineEllipsis="true"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        />
 
 
 
