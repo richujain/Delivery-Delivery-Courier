@@ -77,6 +77,59 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showLoginDialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("Sign In");
+        dialog.setMessage("Please Use E-mail To SignIn");
+
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View login_layout = inflater.inflate(R.layout.layout_login,null);
+
+        final MaterialEditText edtEmail = login_layout.findViewById(R.id.edtEmail);
+        final MaterialEditText edtPassword = login_layout.findViewById(R.id.edtPassword);
+
+        dialog.setView(login_layout);
+
+        //set button
+        dialog.setPositiveButton("Sign In", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+
+                        //validation
+                        if (TextUtils.isEmpty(edtEmail.getText().toString().trim())) {
+                            Snackbar.make(rootLayout, "Please Enter Email Address", Snackbar.LENGTH_SHORT).show();
+                            return;
+                        }
+                        if (TextUtils.isEmpty(edtPassword.getText().toString().trim())) {
+                            Snackbar.make(rootLayout, "Please Enter Password", Snackbar.LENGTH_SHORT).show();
+                            return;
+                        }
+                        if (edtPassword.getText().toString().trim().length() < 6) {
+                            Snackbar.make(rootLayout, "Password Too Short!", Snackbar.LENGTH_SHORT).show();
+                            return;
+                        }
+
+
+                        //Login
+                        firebaseAuth.signInWithEmailAndPassword(edtEmail.getText().toString().trim(),edtPassword.getText().toString().trim())
+                                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                    @Override
+                                    public void onSuccess(AuthResult authResult) {
+                                        
+                                    }
+                                })
+
+
+
+
+                    }
+                });
+
+
+
+
+
+        dialog.show();
     }
 
     private void showRegisterDialog() {
