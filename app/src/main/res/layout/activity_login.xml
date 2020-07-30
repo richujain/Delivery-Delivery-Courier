@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
     android:background="@drawable/backgroundlogin">
 
 
@@ -20,6 +20,7 @@
             android:layout_marginBottom="20dp"
             android:text="Want to deliver something?"
             android:textSize="12sp"
+            android:textColor="@color/colorBtnRegister"
             android:textAlignment="center"
             />
 
