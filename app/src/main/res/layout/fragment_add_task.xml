@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/relativeLayoutAddTask">
         <TextView
             android:layout_width="match_parent"
@@ -20,16 +20,114 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textStyle="bold"
             android:id="@+id/heading"/>
-
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/heading"
             android:id="@+id/edtPickUpLocation"
-            android:hint="Pick Up location"
+            android:padding="10dp"
+            android:hint="Pick Up Location"
             android:inputType="text"/>
 
-        
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtPickUpLocation"
+            android:id="@+id/edtDropOffLocation"
+            android:padding="10dp"
+            android:hint="Drop Off Location"
+            android:inputType="text"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtDropOffLocation"
+            android:id="@+id/etdPackageWeight"
+            android:padding="10dp"
+            android:hint="Package Weight In Pounds"
+            android:inputType="numberDecimal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayoutAddTask"
+            android:padding="10dp"
+            android:layout_below="@id/etdPackageWeight">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingTop="10dp"
+                android:src="@color/colorGrey"
+                android:id="@+id/imageHatchBack"
+                android:contentDescription="Hatchback image"
+                />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:src="@color/colorBlack"
+                android:paddingEnd="10dp"
+                android:id="@+id/imageSedan"
+                android:contentDescription="Sedan image"
+                />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:src="@color/colorRed"
+                android:paddingEnd="10dp"
+                android:id="@+id/imageSUV"
+                android:contentDescription="SUV image"
+                />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/etdPackageWeight"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/imagePickUp"
+                android:src="@color/colorPrimary"
+                android:contentDescription="Pick Up image"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutAddTask"
+            android:text=""
+            android:visibility="gone"
+            android:padding="10dp"
+            android:gravity="center"
+            android:id="@+id/tvVehicleType"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVehicleType"
+            android:id="@+id/edtAmount"
+            android:padding="10dp"
+            android:hint="Amount You Want To Offer"
+            android:inputType="numberDecimal"/>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Request Driver"
+            android:padding="15dp"
+            android:id="@+id/btnRequestDriver"
+            android:layout_marginBottom="75dp"
+            android:background="@color/colorRippleEffect"/>
+
+
 
     </RelativeLayout>
 
