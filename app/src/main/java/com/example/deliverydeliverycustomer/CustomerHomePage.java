@@ -18,11 +18,7 @@ import java.util.ArrayList;
 
 public class CustomerHomePage extends AppCompatActivity {
 
-    //from FM
-    FirebaseUser firebaseUser;
-    FirebaseAuth mAuth;
     FlareBar bottomBar;
-    private DatabaseReference mDatabase;
 
 
     @Override

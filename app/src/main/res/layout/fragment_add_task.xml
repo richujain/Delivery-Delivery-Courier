@@ -27,7 +27,7 @@
             android:id="@+id/edtPickUpLocation"
             android:padding="10dp"
             android:hint="Pick Up Location"
-            android:inputType="text"/>
+            android:inputType="textCapSentences"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:id="@+id/edtDropOffLocation"
             android:padding="10dp"
             android:hint="Drop Off Location"
-            android:inputType="text"/>
+            android:inputType="textCapSentences"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"

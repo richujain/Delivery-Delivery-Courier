@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AddTaskFragment extends Fragment {
     /***********************************************************************************/
@@ -99,6 +101,22 @@ public class AddTaskFragment extends Fragment {
     }
     private void requestDriver(){
         Toast.makeText(getContext(), "Request Driver Successful", Toast.LENGTH_SHORT).show();
+        String pickUpLocation = edtPickUpLocation.getText().toString();
+        String dropOffLocation = edtDropOffLocation.getText().toString();
+        String amount = edtAmount.getText().toString();
+        String weight = etdPackageWeight.getText().toString();
+        String vehicleType = tvVehicleType.getText().toString();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference();
+        databaseReference = firebaseDatabase.getReference().child("orders").push();
+        //writing values
+        databaseReference.child("uid").setValue(uid);
+        databaseReference.child("pickuplocation").setValue(pickUpLocation);
+        databaseReference.child("dropofflocation").setValue(dropOffLocation);
+        databaseReference.child("amount").setValue(amount);
+        databaseReference.child("weight").setValue(weight);
+        databaseReference.child("vehicletype").setValue(vehicleType);
+        databaseReference.child("status").setValue("notaccepted");
     }
     private boolean checkValidation(){
         Boolean flag = true;
