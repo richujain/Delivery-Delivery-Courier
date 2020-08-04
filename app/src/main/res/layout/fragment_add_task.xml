@@ -90,8 +90,8 @@
                 android:paddingEnd="10dp" />
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:layout_below="@id/etdPackageWeight"
                 android:background="@drawable/pick"
                 android:paddingTop="10dp"
