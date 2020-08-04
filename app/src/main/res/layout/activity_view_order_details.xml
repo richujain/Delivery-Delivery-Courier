@@ -158,7 +158,8 @@
             </LinearLayout>
 
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
+                android:layout_marginLeft="35dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorRippleEffect"
                 android:text="Update"
