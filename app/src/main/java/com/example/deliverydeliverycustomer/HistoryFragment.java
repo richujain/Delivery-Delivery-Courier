@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,9 +76,10 @@ public class HistoryFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 clearAll();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    //Toast.makeText(context, "Key is "+snapshot.getRef().getKey().toString(), Toast.LENGTH_SHORT).show();
                     if(snapshot.child("uid").getValue().toString().equals(uid)){
+                        String key = snapshot.getKey();
                         ModelClass modelClass = new ModelClass();
+                        modelClass.setKey(key);
                         modelClass.setImageurl(snapshot.child("imageurl").getValue().toString());
                         modelClass.setDate(snapshot.child("date").getValue().toString());
                         modelClass.setOfferedAmount(snapshot.child("amount").getValue().toString());

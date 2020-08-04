@@ -45,7 +45,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context,ViewOrderDetails.class));
+                //get key somehow
+                String key = modelClassArrayList.get(position).getKey();
+                //context.startActivity(new Intent(context,ViewOrderDetails.class));
+                Intent intent = new Intent(context,ViewOrderDetails.class);
+                intent.putExtra("key",key);
+                context.startActivity(intent);
             }
         });
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
