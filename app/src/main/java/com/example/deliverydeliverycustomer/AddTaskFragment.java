@@ -117,6 +117,13 @@ public class AddTaskFragment extends Fragment {
         databaseReference.child("weight").setValue(weight);
         databaseReference.child("vehicletype").setValue(vehicleType);
         databaseReference.child("status").setValue("notaccepted");
+
+        //open History fragment
+        HistoryFragment nextFrag= new HistoryFragment();
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerParent, nextFrag, "findThisFragment")
+                .addToBackStack(null)
+                .commit();
     }
     private boolean checkValidation(){
         Boolean flag = true;

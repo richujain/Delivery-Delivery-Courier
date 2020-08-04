@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         //Init Firebase
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        users = firebaseDatabase.getReference("Users");
+        users = firebaseDatabase.getReference("users");
         //Init View
         rootLayout = findViewById(R.id.rootLayout);
         btnRegister = findViewById(R.id.btnRegister);
