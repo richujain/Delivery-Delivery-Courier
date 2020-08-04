@@ -7,6 +7,14 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ViewOrderDetails">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colortoolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
