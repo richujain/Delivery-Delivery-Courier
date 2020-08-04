@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.common.api.internal.IStatusCallback;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,9 +26,11 @@ public class ViewOrderDetails extends AppCompatActivity {
     EditText editTextCategory, editTextFrom, editTextTo, editTextDate, editTextWeight, editTextAmount;
     Button updateButton;
     TextView textViewStatus;
-    FirebaseDatabase firebaseDatabaseTwo = FirebaseDatabase.getInstance();
     DatabaseReference databaseReferenceTwo;
     String key;
+    FirebaseUser firebaseUser;
+    FirebaseAuth mAuth;
+    String uid = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +39,13 @@ public class ViewOrderDetails extends AppCompatActivity {
     }
 
     private void init() {
+        mAuth = FirebaseAuth.getInstance();
+        firebaseUser = mAuth.getCurrentUser();
+        this.uid = firebaseUser.getUid();
         key = null;
 
         if (getIntent().hasExtra("key")) {
             key = getIntent().getStringExtra("key");
-            Log.d("key",""+key);
         } else {
             throw new IllegalArgumentException("Activity cannot find  extras " + "key");
         }
@@ -52,7 +58,7 @@ public class ViewOrderDetails extends AppCompatActivity {
         editTextAmount = findViewById(R.id.editTextAmount);
         updateButton = findViewById(R.id.updateButton);
         //updating fields
-        databaseReferenceTwo = firebaseDatabaseTwo.getReference().child("orders");
+        databaseReferenceTwo = FirebaseDatabase.getInstance().getReference().child("orders").child(key);
         setValuesForFields();
 
         //writing
@@ -77,12 +83,35 @@ public class ViewOrderDetails extends AppCompatActivity {
     }
 
     private void setValuesForFields() {
-        Query query = databaseReferenceTwo.child("orders");
+        databaseReferenceTwo.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String flag = dataSnapshot.child("category").getValue().toString();
+                editTextCategory.setText(flag);
+                flag = dataSnapshot.child("pickuplocation").getValue().toString();
+                editTextFrom.setText(flag);
+                flag = dataSnapshot.child("dropofflocation").getValue().toString();
+                editTextTo.setText(flag);
+                flag = dataSnapshot.child("date").getValue().toString();
+                editTextDate.setText(flag);
+                flag = dataSnapshot.child("amount").getValue().toString();
+                editTextAmount.setText(flag);
+                flag = dataSnapshot.child("weight").getValue().toString();
+                editTextWeight.setText(flag);
+                flag = dataSnapshot.child("status").getValue().toString();
+                textViewStatus.setText(flag);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        /*Query query = databaseReferenceTwo.child(key).child("category");
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    if(snapshot.getKey().equals(key)){
                         String flag = snapshot.child("category").getValue().toString();
                         editTextCategory.setText(flag);
                         flag = snapshot.child("pickuplocation").getValue().toString();
@@ -97,7 +126,6 @@ public class ViewOrderDetails extends AppCompatActivity {
                         editTextWeight.setText(flag);
                         flag = snapshot.child("status").getValue().toString();
                         textViewStatus.setText(flag);
-                    }
                 }
             }
 
@@ -105,7 +133,7 @@ public class ViewOrderDetails extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
     }
 
     private boolean checkValidation(){
