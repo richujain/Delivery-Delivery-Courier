@@ -24,6 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/heading"
+            android:id="@+id/edtDescription"
+            android:padding="10dp"
+            android:hint="Description"
+            android:inputType="textCapSentences"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtDescription"
             android:id="@+id/edtPickUpLocation"
             android:padding="10dp"
             android:hint="Pick Up Location"

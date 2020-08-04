@@ -1,5 +1,6 @@
 package com.example.deliverydeliverycustomer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -7,14 +8,25 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import com.google.android.gms.common.api.internal.IStatusCallback;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 public class ViewOrderDetails extends AppCompatActivity {
     EditText editTextCategory, editTextFrom, editTextTo, editTextDate, editTextWeight, editTextAmount;
     Button updateButton;
-    DatabaseReference databaseReference;
+    TextView textViewStatus;
+    FirebaseDatabase firebaseDatabaseTwo = FirebaseDatabase.getInstance();
+    DatabaseReference databaseReferenceTwo;
+    String key;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +35,7 @@ public class ViewOrderDetails extends AppCompatActivity {
     }
 
     private void init() {
-        String key = null;
+        key = null;
 
         if (getIntent().hasExtra("key")) {
             key = getIntent().getStringExtra("key");
@@ -32,12 +44,18 @@ public class ViewOrderDetails extends AppCompatActivity {
             throw new IllegalArgumentException("Activity cannot find  extras " + "key");
         }
         editTextCategory = findViewById(R.id.editTextCategory);
+        textViewStatus = findViewById(R.id.textViewStatus);
         editTextFrom = findViewById(R.id.editTextFrom);
         editTextTo = findViewById(R.id.editTextTo);
         editTextDate = findViewById(R.id.editTextDate);
         editTextWeight = findViewById(R.id.editTextWeight);
         editTextAmount = findViewById(R.id.editTextAmount);
         updateButton = findViewById(R.id.updateButton);
+        //updating fields
+        databaseReferenceTwo = firebaseDatabaseTwo.getReference().child("orders");
+        setValuesForFields();
+
+        //writing
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference;
         databaseReference = firebaseDatabase.getReference().child("orders").child(key);
@@ -57,6 +75,39 @@ public class ViewOrderDetails extends AppCompatActivity {
         });
 
     }
+
+    private void setValuesForFields() {
+        Query query = databaseReferenceTwo.child("orders");
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    if(snapshot.getKey().equals(key)){
+                        String flag = snapshot.child("category").getValue().toString();
+                        editTextCategory.setText(flag);
+                        flag = snapshot.child("pickuplocation").getValue().toString();
+                        editTextFrom.setText(flag);
+                        flag = snapshot.child("dropofflocation").getValue().toString();
+                        editTextTo.setText(flag);
+                        flag = snapshot.child("date").getValue().toString();
+                        editTextDate.setText(flag);
+                        flag = snapshot.child("amount").getValue().toString();
+                        editTextAmount.setText(flag);
+                        flag = snapshot.child("weight").getValue().toString();
+                        editTextWeight.setText(flag);
+                        flag = snapshot.child("status").getValue().toString();
+                        textViewStatus.setText(flag);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     private boolean checkValidation(){
         Boolean flag = true;
         if(editTextFrom.getText().toString().isEmpty()){
