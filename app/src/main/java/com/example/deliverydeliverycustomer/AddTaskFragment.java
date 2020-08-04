@@ -20,6 +20,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class AddTaskFragment extends Fragment {
     /***********************************************************************************/
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +33,7 @@ public class AddTaskFragment extends Fragment {
     /***********************************************************************************/
 
     ImageView imageHatchBack, imageSedan, imageSUV, imagePickUp;
-    EditText edtPickUpLocation, edtDropOffLocation, etdPackageWeight,edtAmount;
+    EditText edtDescription,edtPickUpLocation, edtDropOffLocation, etdPackageWeight,edtAmount;
     TextView tvVehicleType;
     FirebaseUser firebaseUser;
     FirebaseAuth mAuth;
@@ -55,6 +59,7 @@ public class AddTaskFragment extends Fragment {
         imagePickUp = getView().findViewById(R.id.imagePickUp);
 
         //Fields
+        edtDescription = getView().findViewById(R.id.edtDescription);
         edtPickUpLocation = getView().findViewById(R.id.edtPickUpLocation);
         edtDropOffLocation = getView().findViewById(R.id.edtDropOffLocation);
         etdPackageWeight = getView().findViewById(R.id.etdPackageWeight);
@@ -106,11 +111,15 @@ public class AddTaskFragment extends Fragment {
         String amount = edtAmount.getText().toString();
         String weight = etdPackageWeight.getText().toString();
         String vehicleType = tvVehicleType.getText().toString();
+        String description = edtDescription.getText().toString();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference();
         databaseReference = firebaseDatabase.getReference().child("orders").push();
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         //writing values
         databaseReference.child("uid").setValue(uid);
+        databaseReference.child("category").setValue(description);
+        databaseReference.child("date").setValue(date);
         databaseReference.child("pickuplocation").setValue(pickUpLocation);
         databaseReference.child("dropofflocation").setValue(dropOffLocation);
         databaseReference.child("amount").setValue(amount);
@@ -130,6 +139,10 @@ public class AddTaskFragment extends Fragment {
         if(edtPickUpLocation.getText().toString().isEmpty()){
             flag = false;
             edtPickUpLocation.setError("This Field is Necessary");
+        }
+        if(edtDescription.getText().toString().isEmpty()){
+            flag = false;
+            edtDescription.setError("This Field is Necessary");
         }
         if(tvVehicleType.getText().toString().isEmpty()){
             flag = false;
