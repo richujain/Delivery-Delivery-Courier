@@ -55,33 +55,34 @@
             android:layout_below="@id/etdPackageWeight">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="100dp"
                 android:paddingTop="10dp"
-                android:src="@color/colorGrey"
+                android:background="@drawable/hatchback"
                 android:id="@+id/imageHatchBack"
                 android:contentDescription="Hatchback image"
                 />
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="100dp"
                 android:paddingTop="10dp"
                 android:paddingStart="10dp"
-                android:src="@color/colorBlack"
+                android:background="@drawable/suv"
                 android:paddingEnd="10dp"
                 android:id="@+id/imageSedan"
                 android:contentDescription="Sedan image"
                 />
+
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:paddingTop="10dp"
-                android:paddingStart="10dp"
-                android:src="@color/colorRed"
-                android:paddingEnd="10dp"
                 android:id="@+id/imageSUV"
+                android:layout_width="151dp"
+                android:layout_height="89dp"
+                android:background="@drawable/pick"
                 android:contentDescription="SUV image"
-                />
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp" />
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
