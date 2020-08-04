@@ -26,7 +26,7 @@
                 android:paddingTop="50dp"
                 />
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -34,14 +34,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Category : "/>
+                    android:text="Description : "/>
                 <com.rengwuxian.materialedittext.MaterialEditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
                     android:id="@+id/editTextCategory"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -51,12 +53,14 @@
                     android:layout_height="wrap_content"
                     android:text="From : "/>
                 <com.rengwuxian.materialedittext.MaterialEditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
                     android:id="@+id/editTextFrom"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -66,12 +70,14 @@
                     android:layout_height="wrap_content"
                     android:text="To : "/>
                 <com.rengwuxian.materialedittext.MaterialEditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
                     android:id="@+id/editTextTo"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -81,12 +87,14 @@
                     android:layout_height="wrap_content"
                     android:text="Date : "/>
                 <com.rengwuxian.materialedittext.MaterialEditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
                     android:id="@+id/editTextDate"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -96,12 +104,15 @@
                     android:layout_height="wrap_content"
                     android:text="Weight : "/>
                 <com.rengwuxian.materialedittext.MaterialEditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
                     android:id="@+id/editTextWeight"/>
              </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -111,12 +122,15 @@
                     android:layout_height="wrap_content"
                     android:text="Amount : "/>
                 <com.rengwuxian.materialedittext.MaterialEditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
                     android:id="@+id/editTextAmount"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -126,8 +140,11 @@
                     android:layout_height="wrap_content"
                     android:text="Status : "/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
                     android:layout_marginBottom="20dp"
                     android:id="@+id/textViewStatus"/>
             </LinearLayout>
