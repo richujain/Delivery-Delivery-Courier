@@ -116,7 +116,7 @@ public class AddTaskFragment extends Fragment {
         databaseReference.child("amount").setValue(amount);
         databaseReference.child("weight").setValue(weight);
         databaseReference.child("vehicletype").setValue(vehicleType);
-        databaseReference.child("status").setValue("notaccepted");
+        databaseReference.child("status").setValue("Not Accepted");
 
         //open History fragment
         HistoryFragment nextFrag= new HistoryFragment();

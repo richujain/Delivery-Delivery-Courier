@@ -13,6 +13,7 @@ import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -43,10 +44,11 @@ public class HistoryFragment extends Fragment {
     /***********************************************************************************/
 
     RecyclerView recyclerView;
-    DatabaseReference databaseReference;
+
     private ArrayList<ModelClass> arrayList;
     private RecyclerAdapter recyclerAdapter;
     private Context context;
+    DatabaseReference databaseReference;
     FirebaseUser firebaseUser;
     FirebaseAuth mAuth;
     String uid = "";
@@ -73,6 +75,7 @@ public class HistoryFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 clearAll();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    //Toast.makeText(context, "Key is "+snapshot.getRef().getKey().toString(), Toast.LENGTH_SHORT).show();
                     if(snapshot.child("uid").getValue().toString().equals(uid)){
                         ModelClass modelClass = new ModelClass();
                         modelClass.setImageurl(snapshot.child("imageurl").getValue().toString());

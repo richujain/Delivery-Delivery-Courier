@@ -1,6 +1,7 @@
 package com.example.deliverydeliverycustomer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +45,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(context, "Position is "+position, Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context,ViewOrderDetails.class));
             }
         });
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
