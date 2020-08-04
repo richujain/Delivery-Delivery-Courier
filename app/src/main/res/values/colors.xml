@@ -7,8 +7,10 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
     <color name="colorRed">#ff0000</color>
-    <color name="colorRippleEffect">#f816a463</color>
+    <color name="colorRippleEffect">#d12b1f</color>
     <color name="colorBtnSignIn">#1fbad6</color>
+    <color name="colortoolbar">#8a170f</color>
+    <color name="colorrequestdriver">#8a170f</color>
     <color name="colorBtnRegister">#83838c</color>
 
 </resources>
