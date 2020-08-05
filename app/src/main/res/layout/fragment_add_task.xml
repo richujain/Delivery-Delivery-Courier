@@ -37,7 +37,8 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtDescription"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
+            android:layout_marginLeft="35dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/heading"
             android:background="#283593"
@@ -50,7 +51,8 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPickUpLocation"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
+            android:layout_marginLeft="35dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/edtDescription"
             android:hint="Pick Up "
@@ -60,7 +62,8 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtDropOffLocation"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
+            android:layout_marginLeft="35dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/edtPickUpLocation"
             android:hint="Drop Off "
@@ -70,7 +73,8 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/etdPackageWeight"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
+            android:layout_marginLeft="35dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/edtDropOffLocation"
             android:hint="Package Weight (lbs)"
@@ -146,12 +150,15 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtAmount"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
             android:layout_below="@id/tvVehicleType"
             android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
             android:hint="You Offer $"
             android:inputType="numberDecimal"
+            android:layout_marginTop="50dp"
             android:padding="10dp"
             app:met_textColorHint="#489CFF" />
 
