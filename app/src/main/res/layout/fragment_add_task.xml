@@ -39,6 +39,7 @@
             android:id="@+id/edtDescription"
             android:layout_width="350dp"
             android:layout_marginLeft="35dp"
+            android:layout_margintop="10dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/heading"
             android:background="#283593"
@@ -85,9 +86,10 @@
         <LinearLayout
             android:id="@+id/linearLayoutAddTask"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="119dp"
             android:layout_below="@id/etdPackageWeight"
             android:background="#5DA0EF"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -160,7 +162,7 @@
             android:textStyle="bold"
             android:textAlignment="center"
             android:inputType="numberDecimal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:padding="10dp"
             app:met_textColorHint="#489CFF" />
 
