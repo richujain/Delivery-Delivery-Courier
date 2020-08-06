@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_margin="20dp"
+        android:layout_margin="17dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -26,12 +26,12 @@
             android:text=""
             android:textColor="@color/colortoolbar"
             android:textColorHint="@color/colorWhite"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:met_baseColor="@color/colorPrimary"
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/colorPrimary"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#FFFFFF" />
+            app:met_textColorHint="#E1DCDC" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPassword"
@@ -43,12 +43,12 @@
             android:text=""
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:met_baseColor="@color/colorPrimary"
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/colorPrimary"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#FFFFFF" />
+            app:met_textColorHint="#E1DCDC" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

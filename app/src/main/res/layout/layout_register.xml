@@ -22,12 +22,12 @@
             android:text=""
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:met_baseColor="@color/colorPrimary"
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/colorPrimary"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#FFFFFF" />
+            app:met_textColorHint="#E1DCDC" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPassword"
@@ -38,12 +38,12 @@
             android:text=""
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:met_baseColor="@color/colorPrimary"
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/colorPrimary"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#FFFFFF" />
+            app:met_textColorHint="#E1DCDC" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtName"
@@ -54,12 +54,12 @@
             android:text=""
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:met_baseColor="@color/colorPrimary"
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/colorPrimary"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#FFFFFF" />
+            app:met_textColorHint="#E1DCDC" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPhone"
@@ -70,11 +70,11 @@
             android:text=""
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:met_baseColor="@color/colorPrimary"
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/colorPrimary"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#FFFFFF" />
+            app:met_textColorHint="#E1DCDC" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
