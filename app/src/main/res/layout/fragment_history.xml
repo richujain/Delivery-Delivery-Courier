@@ -11,14 +11,24 @@
         android:background="@color/colortoolbar"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
 
-
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingBottom="15dp"
+        android:text="HISTORY"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="#3083D6"
+        android:textStyle="normal|bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="75dp"
-        android:layout_marginTop="75dp"
-        android:id="@+id/recyclerView">
+        android:id="@+id/recyclerView"
+        android:layout_width="437dp"
+        android:layout_height="474dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="75dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 
