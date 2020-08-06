@@ -2,9 +2,10 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colortoolbar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:cardElevation="10dp"    >
+    app:cardElevation="1dp"    >
 
     <LinearLayout
         android:orientation="vertical"

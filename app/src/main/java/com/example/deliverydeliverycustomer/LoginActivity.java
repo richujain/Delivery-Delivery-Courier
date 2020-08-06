@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
     private void showLoginDialog() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this,R.style.MyDialogTheme);
         dialog.setTitle("Sign In");
-        dialog.setMessage("Please Use E-mail To SignIn");
+        dialog.setMessage("");
 
         LayoutInflater inflater = LayoutInflater.from(this);
         View login_layout = inflater.inflate(R.layout.layout_login,null);
@@ -148,7 +148,7 @@ public class LoginActivity extends AppCompatActivity {
     private void showRegisterDialog() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this,R.style.MyDialogTheme);
         dialog.setTitle("Register ");
-        dialog.setMessage("Please Use E-mail To Register");
+        dialog.setMessage("");
 
         LayoutInflater inflater = LayoutInflater.from(this);
         View register_layout = inflater.inflate(R.layout.layout_register,null);

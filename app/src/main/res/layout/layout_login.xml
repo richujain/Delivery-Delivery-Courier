@@ -4,9 +4,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="1dp"
+    app:cardBackgroundColor="@color/colortoolbar"
     android:layout_height="match_parent"
-    app:cardElevation="10dp"    >
+    app:cardElevation="20dp"    >
 
     <LinearLayout
         android:orientation="vertical"
@@ -16,16 +17,15 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtEmail"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
             android:backgroundTint="#FDFBFB"
             android:hint="Email "
-
             android:inputType="textEmailAddress"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colortoolbar"
+            android:textColorHint="@color/colorBlack"
             android:textSize="20sp"
             app:met_baseColor="@color/colorPrimary"
             app:met_floatingLabel="highlight"
