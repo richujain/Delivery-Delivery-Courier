@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showLoginDialog() {
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this,R.style.MyDialogTheme);
         dialog.setTitle("Sign In");
         dialog.setMessage("Please Use E-mail To SignIn");
 
@@ -146,7 +146,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showRegisterDialog() {
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this,R.style.MyDialogTheme);
         dialog.setTitle("Register ");
         dialog.setMessage("Please Use E-mail To Register");
 
