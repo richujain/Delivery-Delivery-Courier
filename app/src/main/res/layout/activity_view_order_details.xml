@@ -9,6 +9,7 @@
     tools:context=".ViewOrderDetails">
     <include layout="@layout/toolbar"/>
     <ScrollView
+        android:background="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scrollView">

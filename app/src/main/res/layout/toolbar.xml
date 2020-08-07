@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@color/colortoolbar"
     android:layout_height="wrap_content">
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:textSize="16dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorWhite"
             />
 
 

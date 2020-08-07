@@ -17,26 +17,27 @@
         android:paddingBottom="15dp"
         android:background="@color/colorWhite"
         android:text="HISTORY"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="#3083D6"
         android:textStyle="normal|bold" />
 
     <LinearLayout
-        android:layout_marginTop="89dp"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginBottom="69dp"
         android:background="@color/colorWhite">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="437dp"
-        android:layout_height="474dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginBottom="75dp">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="400dp"
+            android:layout_height="460dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginBottom="75dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 </FrameLayout>
