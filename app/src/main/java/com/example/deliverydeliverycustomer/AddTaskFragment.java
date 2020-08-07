@@ -126,6 +126,17 @@ public class AddTaskFragment extends Fragment {
         databaseReference.child("weight").setValue(weight);
         databaseReference.child("vehicletype").setValue(vehicleType);
         databaseReference.child("status").setValue("Not Accepted");
+        databaseReference.child("driver").setValue("driver");
+        databaseReference.child("completedby").setValue("completedby");
+        if(vehicleType.equals("hatchback")){
+            databaseReference.child("imageurl").setValue("https://www.readingroomco.com/wp-content/uploads/2020/08/hatchback1.png");
+        }else if(vehicleType.equals("sedan")){
+            databaseReference.child("imageurl").setValue("https://www.readingroomco.com/wp-content/uploads/2020/08/sedan.png");
+        }if(vehicleType.equals("suv")){
+            databaseReference.child("imageurl").setValue("https://www.readingroomco.com/wp-content/uploads/2020/08/suv1.png");
+        }else if(vehicleType.equals("pickup")){
+            databaseReference.child("imageurl").setValue("https://www.readingroomco.com/wp-content/uploads/2020/08/pickup1.png");
+        }
 
         //open History fragment
         HistoryFragment nextFrag= new HistoryFragment();

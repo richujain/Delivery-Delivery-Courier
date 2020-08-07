@@ -16,7 +16,7 @@
         android:id="@+id/relativeLayoutAddTask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="46dp">
+        android:layout_marginBottom="60dp">
         <include layout="@layout/toolbar"/>
         <TextView
             android:id="@+id/heading"
