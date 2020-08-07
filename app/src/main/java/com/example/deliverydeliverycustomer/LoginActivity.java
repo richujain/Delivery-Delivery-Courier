@@ -36,12 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference users;
     RelativeLayout rootLayout;
-/*
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
-*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder().setDefaultFontPath("fonts/Arkhip_font.ttf")
        .setFontAttrId(R.attr.fontPath).build());
         setContentView(R.layout.activity_login);
-
         init();
     }
 
@@ -115,8 +109,6 @@ public class LoginActivity extends AppCompatActivity {
                             Snackbar.make(rootLayout, "Password Too Short!", Snackbar.LENGTH_SHORT).show();
                             return;
                         }
-
-
                         //Login
                         firebaseAuth.signInWithEmailAndPassword(edtEmail.getText().toString().trim(),edtPassword.getText().toString().trim())
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -141,7 +133,6 @@ public class LoginActivity extends AppCompatActivity {
                 dialogInterface.dismiss();
             }
         });
-
         dialog.show();
     }
 
