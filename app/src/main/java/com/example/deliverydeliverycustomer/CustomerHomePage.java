@@ -29,9 +29,9 @@ public class CustomerHomePage extends AppCompatActivity {
     }
     private void flareBar() {
         bottomBar = findViewById(R.id.bottomBar);
-        bottomBar.setBarBackgroundColor(Color.parseColor("#FFFFFF"));
+        bottomBar.setBarBackgroundColor(Color.parseColor("#1ab8f4"));
         ArrayList<Flaretab> tabs = new ArrayList<>();
-        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.plus_50px),"New Task","#FFECB3"));
+        tabs.add(new Flaretab(getResources().getDrawable(R.drawable.plus_50px),"New","#f0f2f5"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.list_50px),"Orders","#80DEEA"));
         tabs.add(new Flaretab(getResources().getDrawable(R.drawable.profile_48px),"Profile","#B39DDB"));
         //tabs.add(new Flaretab(getResources().getDrawable(R.drawable.debt),"Debts","#EF9A9A"));

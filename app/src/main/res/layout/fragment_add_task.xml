@@ -16,7 +16,7 @@
         android:id="@+id/relativeLayoutAddTask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="46dp">
+        android:layout_marginBottom="50dp">
         <include layout="@layout/toolbar"/>
         <TextView
             android:id="@+id/heading"
@@ -176,6 +176,7 @@
             android:text="Request Driver"
             android:textAlignment="center"
             android:textColor="#FBFBFB"
+
             android:textSize="18sp"
             android:textStyle="bold" />
 
