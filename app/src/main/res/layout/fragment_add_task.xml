@@ -7,20 +7,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:backgroundTint="#FFFFFF"
     tools:context=".AddTaskFragment">
 
 
 
     <RelativeLayout
-
+        android:background="@color/colorPrimary"
         android:id="@+id/relativeLayoutAddTask"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-<include layout="@layout/toolbar"/>
-
-
+        android:layout_height="match_parent"
+        android:layout_marginBottom="46dp">
+        <include layout="@layout/toolbar"/>
         <TextView
             android:id="@+id/heading"
             android:layout_width="match_parent"
@@ -170,7 +167,7 @@
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="35dp"
-            android:layout_marginBottom="98dp"
+            android:layout_marginBottom="54dp"
             android:background="@color/colortoolbar"
             android:ellipsize="middle"
             android:fontFamily="sans-serif-black"

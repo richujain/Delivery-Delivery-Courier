@@ -9,7 +9,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:background="@color/colortoolbar"
         android:padding="10dp"
         android:id="@+id/linear_ll"
         android:orientation="horizontal">
@@ -19,8 +20,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="340dp"
-            android:text="Help"
-            android:textColor="@color/colortoolbar"
+            android:text=""
+            android:textColor="@color/colorWhite"
             android:textSize="19dp"
             android:textStyle="normal|bold"
 
