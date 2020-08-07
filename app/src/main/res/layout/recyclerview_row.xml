@@ -11,7 +11,8 @@
     android:elevation="90dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
+        android:background="@color/colortoolbar"
         android:layout_height="wrap_content">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -32,6 +33,7 @@
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:text="This is a Title"
+            android:textColor="@color/colorWhite"
             android:gravity="center"
             android:layout_toRightOf="@+id/vehicleTypeCircularImage"
             />
@@ -46,6 +48,7 @@
             android:gravity="center"
             android:layout_toRightOf="@+id/vehicleTypeCircularImage"
             android:textSize="15sp"
+            android:textColor="@color/colorWhite"
             android:textAppearance="@style/ShapeAppearance.MaterialComponents.LargeComponent"
             android:text="$100.25"
             android:layout_below="@+id/statusOfOrder"
@@ -58,6 +61,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="7dp"
             android:gravity="center"
+            android:textColor="@color/colorWhite"
             android:layout_toRightOf="@+id/vehicleTypeCircularImage"
             android:textSize="15sp"
             android:text="Posted On 2019/01/01"
