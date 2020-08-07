@@ -142,6 +142,7 @@
             android:layout_below="@id/linearLayoutAddTask"
             android:gravity="center"
             android:padding="10dp"
+            android:textColor="@color/colortoolbar"
             android:text=""
             android:visibility="gone" />
 
