@@ -2,11 +2,11 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/colortoolbar"
     android:layout_width="match_parent"
+    app:cardCornerRadius="1dp"
+    app:cardBackgroundColor="@color/colorWhite"
     android:layout_height="match_parent"
-    app:cardElevation="1dp"    >
-
+    app:cardElevation="20dp"    >
     <LinearLayout
         android:orientation="vertical"
         android:layout_margin="20dp"
@@ -20,14 +20,14 @@
             android:hint="Email "
             android:inputType="textEmailAddress"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colortoolbar"
+            android:textColorHint="@color/colortoolbar"
             android:textSize="17sp"
-            app:met_baseColor="@color/colorPrimary"
+            app:met_baseColor="@color/colortoolbar"
             app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
+            app:met_primaryColor="@color/colortoolbar"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#E1DCDC" />
+            app:met_textColorHint="@color/colortoolbar" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPassword"
@@ -36,14 +36,14 @@
             android:hint="Password "
             android:inputType="textPassword"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colortoolbar"
+            android:textColorHint="@color/colortoolbar"
             android:textSize="17sp"
-            app:met_baseColor="@color/colorPrimary"
+            app:met_baseColor="@color/colortoolbar"
             app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
+            app:met_primaryColor="@color/colortoolbar"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#E1DCDC" />
+            app:met_textColorHint="@color/colortoolbar" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtName"
@@ -52,14 +52,14 @@
             android:hint="Name "
             android:inputType="text"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colortoolbar"
+            android:textColorHint="@color/colortoolbar"
             android:textSize="17sp"
-            app:met_baseColor="@color/colorPrimary"
+            app:met_baseColor="@color/colortoolbar"
             app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
+            app:met_primaryColor="@color/colortoolbar"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#E1DCDC" />
+            app:met_textColorHint="@color/colortoolbar" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPhone"
@@ -68,13 +68,13 @@
             android:hint="Phone Number "
             android:inputType="phone"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colortoolbar"
+            android:textColorHint="@color/colortoolbar"
             android:textSize="17sp"
-            app:met_baseColor="@color/colorPrimary"
+            app:met_baseColor="@color/colortoolbar"
             app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
+            app:met_primaryColor="@color/colortoolbar"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#E1DCDC" />
+            app:met_textColorHint="@color/colortoolbar" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

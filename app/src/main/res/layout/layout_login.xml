@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     app:cardCornerRadius="1dp"
-    app:cardBackgroundColor="@color/colortoolbar"
+    app:cardBackgroundColor="@color/colorWhite"
     android:layout_height="match_parent"
     app:cardElevation="20dp"    >
 
@@ -20,18 +20,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#FDFBFB"
+            android:backgroundTint="@color/colortoolbar"
             android:hint="Email "
             android:inputType="textEmailAddress"
             android:text=""
             android:textColor="@color/colortoolbar"
-            android:textColorHint="@color/colorWhite"
+            android:textColorHint="@color/colortoolbar"
             android:textSize="17sp"
-            app:met_baseColor="@color/colorPrimary"
+            app:met_baseColor="@color/colortoolbar"
             app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
+            app:met_primaryColor="@color/colortoolbar"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#E1DCDC" />
+            app:met_textColorHint="@color/colortoolbar" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPassword"
@@ -41,14 +41,14 @@
             android:hint="Password "
             android:inputType="textPassword"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colortoolbar"
+            android:textColorHint="@color/colortoolbar"
             android:textSize="17sp"
-            app:met_baseColor="@color/colorPrimary"
+            app:met_baseColor="@color/colortoolbar"
             app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
+            app:met_primaryColor="@color/colortoolbar"
             app:met_singleLineEllipsis="true"
-            app:met_textColorHint="#E1DCDC" />
+            app:met_textColorHint="@color/colortoolbar" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
