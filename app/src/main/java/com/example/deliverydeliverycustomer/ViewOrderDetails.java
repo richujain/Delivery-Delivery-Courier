@@ -107,33 +107,6 @@ public class ViewOrderDetails extends AppCompatActivity {
 
             }
         });
-        /*Query query = databaseReferenceTwo.child(key).child("category");
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        String flag = snapshot.child("category").getValue().toString();
-                        editTextCategory.setText(flag);
-                        flag = snapshot.child("pickuplocation").getValue().toString();
-                        editTextFrom.setText(flag);
-                        flag = snapshot.child("dropofflocation").getValue().toString();
-                        editTextTo.setText(flag);
-                        flag = snapshot.child("date").getValue().toString();
-                        editTextDate.setText(flag);
-                        flag = snapshot.child("amount").getValue().toString();
-                        editTextAmount.setText(flag);
-                        flag = snapshot.child("weight").getValue().toString();
-                        editTextWeight.setText(flag);
-                        flag = snapshot.child("status").getValue().toString();
-                        textViewStatus.setText(flag);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });*/
     }
 
     private boolean checkValidation(){

@@ -127,7 +127,7 @@ public class AddTaskFragment extends Fragment {
         databaseReference.child("vehicletype").setValue(vehicleType);
         databaseReference.child("status").setValue("Not Accepted");
         databaseReference.child("driver").setValue("driver");
-        databaseReference.child("completedby").setValue("completedby");
+        databaseReference.child("completedby").setValue("driveruid");
         if(vehicleType.equals("hatchback")){
             databaseReference.child("imageurl").setValue("https://www.readingroomco.com/wp-content/uploads/2020/08/hatchback1.png");
         }else if(vehicleType.equals("sedan")){
