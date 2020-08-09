@@ -3,6 +3,8 @@ package com.example.deliverydeliverycustomer;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -93,6 +95,28 @@ public class ViewOrderDetails extends AppCompatActivity {
                 flag = dataSnapshot.child("dropofflocation").getValue().toString();
                 editTextTo.setText(flag);
                 flag = dataSnapshot.child("date").getValue().toString();
+                editTextFrom.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Uri gmmIntentUri = Uri.parse("geo:0,0?q="+editTextFrom.getText().toString());
+                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                        mapIntent.setPackage("com.google.android.apps.maps");
+                        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                            startActivity(mapIntent);
+                        }
+                    }
+                });
+                editTextTo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Uri gmmIntentUri = Uri.parse("geo:0,0?q="+editTextTo.getText().toString());
+                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                        mapIntent.setPackage("com.google.android.apps.maps");
+                        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                            startActivity(mapIntent);
+                        }
+                    }
+                });
                 editTextDate.setText(flag);
                 flag = dataSnapshot.child("amount").getValue().toString();
                 editTextAmount.setText(flag);
