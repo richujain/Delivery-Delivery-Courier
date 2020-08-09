@@ -1,11 +1,13 @@
 package com.example.deliverydeliverycustomer;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +17,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.Status;
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.widget.Autocomplete;
+import com.google.android.libraries.places.widget.AutocompleteActivity;
+import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+
+import static android.app.Activity.RESULT_OK;
 
 public class AddTaskFragment extends Fragment {
     /***********************************************************************************/
@@ -39,7 +51,7 @@ public class AddTaskFragment extends Fragment {
     FirebaseAuth mAuth;
     String uid = "";
     Button btnRequestDriver;
-
+    String key = "AIzaSyBfXYll-nT_4LG0a1vAdMypyiYrFqRe2Q0";
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         init();
@@ -66,6 +78,38 @@ public class AddTaskFragment extends Fragment {
         edtAmount = getView().findViewById(R.id.edtAmount);
         tvVehicleType = getView().findViewById(R.id.tvVehicleType);
         btnRequestDriver = getView().findViewById(R.id.btnRequestDriver);
+
+        //initialize places
+        Places.initialize(getContext(),key);
+        edtPickUpLocation.setFocusable(false);
+        edtDropOffLocation.setFocusable(false);
+        edtPickUpLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<Place.Field> fieldsList = Arrays.asList(Place.Field.ADDRESS,Place.Field.LAT_LNG
+                        ,Place.Field.NAME);
+                //Create Intent
+                Intent intent = new Autocomplete.IntentBuilder(AutocompleteActivityMode.OVERLAY,fieldsList)
+                        .build(getContext());
+                startActivityForResult(intent,100);
+            }
+        });
+
+        edtDropOffLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<Place.Field> fieldsList = Arrays.asList(Place.Field.ADDRESS,Place.Field.LAT_LNG
+                        ,Place.Field.NAME);
+                //Create Intent
+                Intent intent = new Autocomplete.IntentBuilder(AutocompleteActivityMode.OVERLAY,fieldsList)
+                        .build(getContext());
+                startActivityForResult(intent,200);
+            }
+        });
+
+
+
+
 
         //setting onclick
         imageHatchBack.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +144,31 @@ public class AddTaskFragment extends Fragment {
             }
         });
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == 100 && resultCode == RESULT_OK){
+            Place place = Autocomplete.getPlaceFromIntent(data);
+            edtPickUpLocation.setText(place.getAddress());
+        }
+        else if(resultCode == AutocompleteActivity.RESULT_ERROR){
+            Status status = Autocomplete.getStatusFromIntent(data);
+            Toast.makeText(getContext(), ""+status.getStatusMessage(), Toast.LENGTH_SHORT).show();
+            Log.e("status",""+status.getStatusMessage());
+        }
+
+        if(requestCode == 200 && resultCode == RESULT_OK){
+            Place place = Autocomplete.getPlaceFromIntent(data);
+            edtDropOffLocation.setText(place.getAddress());
+        }
+        else if(resultCode == AutocompleteActivity.RESULT_ERROR){
+            Status status = Autocomplete.getStatusFromIntent(data);
+            Toast.makeText(getContext(), ""+status.getStatusMessage(), Toast.LENGTH_SHORT).show();
+            Log.e("status",""+status.getStatusMessage());
+
+        }
+    }
+
     private void setVehicleType(String vehicleTypeName){
         this.tvVehicleType.setText(vehicleTypeName);
         tvVehicleType.setVisibility(View.VISIBLE);

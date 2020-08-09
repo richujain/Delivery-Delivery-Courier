@@ -52,6 +52,7 @@
             android:layout_below="@id/edtDescription"
             android:hint="Pick Up "
             android:inputType="textCapSentences"
+            android:background="@android:drawable/editbox_background"
             android:padding="10dp"
             app:met_textColorHint="#489CFF" />
 
