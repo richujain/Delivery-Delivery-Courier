@@ -22,7 +22,7 @@
             android:id="@+id/heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50dp"
+            android:paddingTop="65dp"
             android:paddingBottom="15dp"
             android:text="REQUEST DRIVER"
             android:textAlignment="center"
