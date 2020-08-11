@@ -187,7 +187,6 @@ public class LoginActivity extends AppCompatActivity {
                                 //Save user to firebase database
                                 User user = new User();
                                 user.setEmail(edtEmail.getText().toString().trim());
-                                user.setPassword(edtPassword.getText().toString().trim());
                                 user.setName(edtName.getText().toString().trim());
                                 user.setPhone(edtPhone.getText().toString().trim());
 

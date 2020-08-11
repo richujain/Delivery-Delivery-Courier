@@ -1,7 +1,7 @@
 package com.example.deliverydeliverycustomer.Model;
 
 public class User {
-    private String email, password, name, phone;
+    private String email, name, phone;
 
     public User(){
     }
@@ -14,13 +14,7 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     public String getName() {
         return name;
@@ -40,7 +34,6 @@ public class User {
 
     public User(String email, String password, String name, String phone) {
         this.email = email;
-        this.password = password;
         this.name = name;
         this.phone = phone;
     }

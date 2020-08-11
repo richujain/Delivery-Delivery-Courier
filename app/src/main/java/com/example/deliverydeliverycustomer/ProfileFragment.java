@@ -98,7 +98,7 @@ public class ProfileFragment extends Fragment {
         return flag;
     }
     private void setValuesForFields() {
-        databaseReferenceTwo = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
+        databaseReferenceTwo = FirebaseDatabase.getInstance().getReference().child("users").child(uid);
         databaseReferenceTwo.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
