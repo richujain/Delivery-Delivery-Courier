@@ -29,6 +29,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textColor="#3083D6"
             android:textStyle="normal|bold" />
+        <View
+            android:layout_width="378dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="2dp"
+            android:background="@color/colortoolbar"
+            android:layout_marginTop="102dp"
+            />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtDescription"
